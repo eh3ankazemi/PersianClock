@@ -581,9 +581,259 @@
           padding: 18px 14px;
         }
       }
+      /* ===== background photo ===== */
+      #bgimg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+      #bgimg.on {
+        opacity: 0.8;
+      }
+      #bgimg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+      }
+      body[data-theme="light"] #bgimg::after {
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.45),
+          rgba(255, 255, 255, 0.6)
+        );
+      }
+
+      /* ===== paper calendar ===== */
+      .cal {
+        width: max(200px, min(88vw, calc((100vh - 330px) * 0.75), 440px));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        transition: width 0.6s;
+      }
+      .cal-wrap {
+        position: relative;
+        width: 100%;
+      }
+      .binder {
+        position: absolute;
+        top: -18px;
+        left: 0;
+        right: 0;
+        height: 44px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 14%;
+        z-index: 6;
+        pointer-events: none;
+      }
+      .binder i {
+        width: 16px;
+        height: 44px;
+        border-radius: 99px;
+        background: linear-gradient(90deg, #6c6c74, #f2f2f5 42%, #4d4d55);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+      }
+      .stack {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3/4;
+        perspective: 1400px;
+        cursor: pointer;
+        filter: drop-shadow(0 26px 40px rgba(0, 0, 0, 0.45));
+      }
+      .stack::before,
+      .stack::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        z-index: 0;
+      }
+      .stack::before {
+        background: #e0dccd;
+        transform: translateY(8px) scale(0.982);
+      }
+      .stack::after {
+        background: #ece8da;
+        transform: translateY(4px) scale(0.991);
+      }
+      .pg {
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        background: linear-gradient(#fffefa, #f6f2e6);
+        color: #23222a;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        container-type: inline-size;
+        transform-origin: top center;
+        backface-visibility: hidden;
+        z-index: 2;
+        user-select: none;
+      }
+      .pg.under {
+        z-index: 1;
+      }
+      .pg-head {
+        background: linear-gradient(135deg, #e5405e, #b01f3d);
+        color: #fff;
+        padding: 9cqw 6cqw 4cqw;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-weight: 700;
+        border-bottom: 2px dashed rgba(255, 255, 255, 0.45);
+      }
+      .pg-month {
+        font-size: 8cqw;
+      }
+      .pg-year {
+        font-size: 5.5cqw;
+        opacity: 0.9;
+      }
+      .pg-day {
+        font-size: 50cqw;
+        font-weight: 800;
+        line-height: 1.05;
+        margin-top: 2cqw;
+        color: #1c1b22;
+      }
+      .pg-wd {
+        font-size: 9cqw;
+        font-weight: 700;
+        color: #c4283f;
+      }
+      .pg-sub {
+        margin-top: auto;
+        padding: 0 5cqw;
+        font-size: 4.6cqw;
+        color: #6b6a74;
+        display: flex;
+        flex-direction: column;
+        gap: 1cqw;
+        direction: rtl;
+      }
+      .cal-time {
+        font-size: 8.5cqw;
+        font-weight: 800;
+        direction: ltr;
+        font-variant-numeric: tabular-nums;
+        padding: 3cqw 0 5cqw;
+        min-height: 15cqw;
+        color: #2b2a35;
+      }
+      .cal-nav {
+        display: flex;
+        gap: 8px;
+        transition:
+          opacity 0.5s,
+          max-height 0.5s;
+        max-height: 60px;
+      }
+
+      /* ===== sizes / idle ===== */
+      :root {
+        --ds: clamp(30px, 8vw, 56px);
+      }
+      .dot {
+        width: var(--ds);
+      }
+      .bleg span {
+        height: var(--ds);
+      }
+      header {
+        max-height: 120px;
+        transition:
+          opacity 0.6s,
+          max-height 0.6s,
+          padding 0.6s,
+          transform 0.6s;
+      }
+      footer {
+        max-height: 260px;
+        transition:
+          opacity 0.6s,
+          max-height 0.6s,
+          padding 0.6s,
+          transform 0.6s;
+      }
+      svg.big,
+      .d-main,
+      .d-sec,
+      .w-main {
+        transition:
+          width 0.6s,
+          font-size 0.6s;
+      }
+      body.idle {
+        cursor: none;
+      }
+      body.idle header,
+      body.idle footer {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      body.idle header {
+        transform: translateY(-14px);
+      }
+      body.idle footer {
+        transform: translateY(14px);
+      }
+      body.idle .hint {
+        opacity: 0;
+      }
+      body.idle .cal-nav {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      body.idle svg.big {
+        width: min(94vh, 94vw, 1100px);
+      }
+      body.idle .d-main {
+        font-size: clamp(4rem, 23vw, 22rem);
+      }
+      body.idle .d-sec {
+        font-size: clamp(2rem, 8.5vw, 8rem);
+      }
+      body.idle .digital {
+        padding: clamp(20px, 4vw, 60px) clamp(24px, 6vw, 90px);
+      }
+      body.idle .dt-fa {
+        font-size: clamp(1.3rem, 4vw, 2.6rem);
+      }
+      body.idle .w-main {
+        font-size: clamp(2rem, 8vw, 6.4rem);
+      }
+      body.idle .cal {
+        width: max(200px, min(92vw, calc((100vh - 60px) * 0.74), 780px));
+      }
+      body.idle {
+        --ds: clamp(36px, 10.5vw, 104px);
+      }
+      body.idle .blab {
+        font-size: clamp(1.2rem, 4vw, 2.6rem);
+      }
+      .hint {
+        transition: opacity 0.6s;
+      }
     </style>
   </head>
   <body data-theme="midnight">
+    <div id="bgimg"></div>
     <div class="blob b1"></div>
     <div class="blob b2"></div>
     <div class="blob b3"></div>
@@ -595,6 +845,7 @@
         <button class="tab" data-mode="rings">حلقه‌ها</button>
         <button class="tab" data-mode="binary">باینری</button>
         <button class="tab" data-mode="words">نوشتاری</button>
+        <button class="tab" data-mode="calendar">تقویم</button>
       </nav>
     </header>
 
@@ -692,6 +943,43 @@
           <div class="dt-ar" id="wAr"></div>
         </div>
       </section>
+      <!-- paper calendar -->
+      <section class="view" id="v-calendar">
+        <div class="cal">
+          <div class="cal-wrap">
+            <div class="binder"><i></i><i></i><i></i></div>
+            <div class="stack" id="stack">
+              <div class="pg under" id="pgUnder">
+                <div class="pg-head">
+                  <span class="pg-month"></span><span class="pg-year"></span>
+                </div>
+                <div class="pg-day"></div>
+                <div class="pg-wd"></div>
+                <div class="pg-sub">
+                  <span class="pg-g"></span><span class="pg-h"></span>
+                </div>
+                <div class="cal-time"></div>
+              </div>
+              <div class="pg" id="pgTop">
+                <div class="pg-head">
+                  <span class="pg-month"></span><span class="pg-year"></span>
+                </div>
+                <div class="pg-day"></div>
+                <div class="pg-wd"></div>
+                <div class="pg-sub">
+                  <span class="pg-g"></span><span class="pg-h"></span>
+                </div>
+                <div class="cal-time"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cal-nav">
+            <button class="chip" id="cPrev">روز قبل</button
+            ><button class="chip" id="cToday">امروز</button
+            ><button class="chip" id="cNext">روز بعد</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -700,11 +988,13 @@
         <select class="chip" id="selTz" aria-label="منطقه زمانی"></select>
         <button class="chip" id="bH12"></button>
         <button class="chip" id="bDig"></button>
+        <button class="chip" id="bBg"></button>
         <button class="chip" id="bFull">تمام‌صفحه</button>
       </div>
     </footer>
     <div class="hint">
-      1–5 modes · T theme · H 12/24 · D digits · F fullscreen
+      1–6 modes · T theme · H 12/24 · D digits · F
+      fullscreen
     </div>
 
     <script>
@@ -719,7 +1009,15 @@
           ["sunset", "غروب"],
           ["aurora", "شفق"],
         ];
-        const MODES = ["analog", "digital", "rings", "binary", "words"];
+        const MODES = [
+          "analog",
+          "digital",
+          "rings",
+          "binary",
+          "words",
+          "calendar",
+        ];
+        const IDLE_MS = 4000; /* مدت بی‌حرکتی تا مخفی‌شدن نوارها (میلی‌ثانیه) */
         const TZS = [
           ["Asia/Tehran", "تهران"],
           ["Asia/Baku", "باکو"],
@@ -738,6 +1036,7 @@
           tz: "Asia/Tehran",
           h12: false,
           fa: true,
+          bg: 0,
         };
         try {
           const x = JSON.parse(localStorage.getItem("fa-clock") || "null");
@@ -786,6 +1085,23 @@
             timeZone: tz,
             weekday: "long",
           });
+          F.cp = new Intl.DateTimeFormat("fa-IR-u-ca-persian-nu-latn", {
+            timeZone: tz,
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          });
+          F.cg = new Intl.DateTimeFormat("en-US", {
+            timeZone: tz,
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          });
+          F.ch = new Intl.DateTimeFormat(
+            "fa-IR-u-ca-islamic-umalqura-nu-latn",
+            { timeZone: tz, dateStyle: "long" },
+          );
           F.dm = new Intl.DateTimeFormat("fa-IR", {
             timeZone: tz,
             day: "numeric",
@@ -957,6 +1273,7 @@
             (S.h12 ? (P.h < 12 ? " AM" : " PM") : "");
           $("#wFa").textContent = fmt(fa);
           $("#wAr").textContent = "هجری قمری: " + fmt(ar);
+          calUpdate(now, 1);
         }
 
         /* ring circumferences */
@@ -1050,17 +1367,131 @@
         $("#selTz").onchange = (e) => {
           S.tz = e.target.value;
           buildF();
+          cal.shown = null;
           applyUI();
         };
         addEventListener("keydown", (e) => {
           if (e.target.tagName === "SELECT") return;
           const k = e.key.toLowerCase();
-          if (k >= "1" && k <= "5") setMode(MODES[+k - 1]);
+          if (k >= "1" && k <= "6") setMode(MODES[+k - 1]);
+          else if (
+            S.mode === "calendar" &&
+            (e.key === "ArrowLeft" || e.key === "ArrowRight")
+          )
+            calGo(e.key === "ArrowLeft" ? 1 : -1);
           else if (k === "t") cycleTheme();
           else if (k === "h") toggleH12();
           else if (k === "d") toggleDig();
           else if (k === "f") toggleFull();
         });
+
+        /* ===== paper calendar ===== */
+        const DAY = 864e5;
+        const cal = { off: 0, shown: null, shownDate: null, busy: false };
+        function calFill(el, date) {
+          const p = F.cp.formatToParts(date),
+            g = (t) => (p.find((x) => x.type === t) || {}).value || "";
+          el.querySelector(".pg-month").textContent = g("month");
+          el.querySelector(".pg-year").textContent = fmt(g("year"));
+          el.querySelector(".pg-day").textContent = fmt(g("day"));
+          el.querySelector(".pg-wd").textContent = g("weekday");
+          el.querySelector(".pg-g").textContent = F.cg.format(date);
+          el.querySelector(".pg-h").textContent =
+            "قمری: " + fmt(F.ch.format(date));
+        }
+        function calUpdate(now, dir) {
+          const top = $("#pgTop"),
+            under = $("#pgUnder");
+          const d = new Date(now + cal.off * DAY),
+            key = F.cp.format(d);
+          const tm =
+            cal.off === 0
+              ? fmt(pad(h12(P.h)) + ":" + pad(P.m) + ":" + pad(P.s))
+              : "";
+          $$(".cal-time").forEach((t) => (t.textContent = tm));
+          if (key === cal.shown || cal.busy) return;
+          const still =
+            cal.shown === null ||
+            S.mode !== "calendar" ||
+            matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (still) {
+            calFill(top, d);
+            calFill(under, d);
+            cal.shown = key;
+            cal.shownDate = d;
+            return;
+          }
+          cal.busy = true;
+          if (dir >= 0) {
+            calFill(under, d);
+            top.animate(
+              [
+                { transform: "rotateX(0deg)", filter: "brightness(1)" },
+                { transform: "rotateX(-100deg)", filter: "brightness(.55)" },
+              ],
+              {
+                duration: 750,
+                easing: "cubic-bezier(.5,0,.8,.4)",
+                fill: "forwards",
+              },
+            ).onfinish = function () {
+              calFill(top, d);
+              this.cancel();
+              cal.shown = key;
+              cal.shownDate = d;
+              cal.busy = false;
+            };
+          } else {
+            calFill(under, cal.shownDate);
+            calFill(top, d);
+            top.animate(
+              [
+                { transform: "rotateX(-100deg)", filter: "brightness(.55)" },
+                { transform: "rotateX(0deg)", filter: "brightness(1)" },
+              ],
+              { duration: 750, easing: "cubic-bezier(.2,.6,.5,1)" },
+            ).onfinish = function () {
+              calFill(under, d);
+              cal.shown = key;
+              cal.shownDate = d;
+              cal.busy = false;
+            };
+          }
+        }
+        function calGo(n) {
+          if (cal.busy) return;
+          cal.off += n;
+          calUpdate(Date.now(), n > 0 ? 1 : -1);
+        }
+        $("#cPrev").onclick = () => calGo(-1);
+        $("#cNext").onclick = () => calGo(1);
+        $("#cToday").onclick = () => {
+          if (cal.busy || !cal.off) return;
+          const dir = cal.off > 0 ? -1 : 1;
+          cal.off = 0;
+          calUpdate(Date.now(), dir);
+        };
+        $("#stack").addEventListener("click", () => calGo(1));
+
+
+        /* ===== idle: hide bars, enlarge clock ===== */
+        let idleT;
+        function wake() {
+          document.body.classList.remove("idle");
+          clearTimeout(idleT);
+          idleT = setTimeout(() => {
+            if (
+              document.activeElement &&
+              document.activeElement.tagName === "SELECT"
+            )
+              return wake();
+            document.body.classList.add("idle");
+          }, IDLE_MS);
+        }
+        ["mousemove", "pointerdown", "touchstart", "keydown", "wheel"].forEach(
+          (ev) => addEventListener(ev, wake, { passive: true }),
+        );
+        wake();
 
         buildF();
         buildBin();

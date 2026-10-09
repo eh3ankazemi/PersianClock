@@ -1,112 +1,1072 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="rtl" lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>تاریخ فارسی</title>
-    <meta name="description" content="تاریخ فارسی" />
-    <meta name="expires" content="never" />
-    <meta name="apple-mobile-web-app-title" content="تاریخ فا" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="robots" content="index,follow,notranslate" />
-    <link rel="alternate" hreflang="fa-IR" href="https://fa-date.onfing.ir/" />
-    <meta property="og:title" content="تاریخ فارسی" />
-    <meta property="og:description" content="تاریخ فارسی" />
-    <meta property="og:url" content="https://fa-date.onfing.ir/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/assets/favicon.ico" />
-    <meta property="og:image:alt" content="تاریخ فارسی" />
-    <meta property="og:locale" content="fa_IR" />
-    <meta property="og:site_name" content="تاریخ فارسی" />
-    <link rel="canonical" href="https://fa-date.onfing.ir/" />
+    <title>تاریخ و ساعت فارسی</title>
+    <meta
+      name="description"
+      content="ساعت و تاریخ فارسی با حالت‌های مختلف نمایش زمان"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="application-name" content="تاریخ فارسی" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#0b0d14" />
+    <meta name="robots" content="index,follow,notranslate" />
     <meta name="google" content="notranslate" />
+    <meta property="og:title" content="تاریخ و ساعت فارسی" />
+    <meta property="og:locale" content="fa_IR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      rel="apple-touch-icon"
-      sizes="36x36"
-      href="/assets/icon/favicon-36x36.png"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="96x96"
-      href="/assets/icon/favicon-96x96.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/assets/icon/favicon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="/assets/icon/favicon-192x192.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="512x512"
-      href="/assets/icon/favicon-512x512.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="36x36"
-      href="/assets/icon/favicon-36x36.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/assets/icon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/assets/icon/favicon-192x192.png"
-    />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="module">
-      (function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();function c(){let s;const n=e=>{document.getElementById("one").innerHTML=e.fa,document.getElementById("two").innerHTML=e.en},o=()=>{const e=new Date,t=new Intl.DateTimeFormat("fa-IR",{dateStyle:"full"}),a=new Intl.DateTimeFormat("en-US",{dateStyle:"full"});s=a.format(e),n({fa:t.format(e),en:a.format(e)})},r=()=>{const e=new Date,t=new Intl.DateTimeFormat("en-US",{dateStyle:"full"});if(t.format(e)!==s){const a=new Intl.DateTimeFormat("fa-IR",{dateStyle:"full"});s=t.format(e),n({fa:a.format(e),en:t.format(e)})}};o(),setInterval(r,1e3)}function l(){const s=()=>{const o=new Date,r=o.getSeconds()/60,e=(r+o.getMinutes())/60,t=(e+o.getHours())/12;n(document.querySelector("[data-second-hand]"),r),n(document.querySelector("[data-minute-hand]"),e),n(document.querySelector("[data-hour-hand]"),t)};function n(o,r){o.style.setProperty("--rotation",r*360)}s(),setInterval(s,1e3)}c();l();
-    </script>
-  </head>
-  <body>
-    <div class="clock">
-      <div class="App">
-        <div>
-          <h1 class="font">امروز</h1>
-        </div>
-        <div>
-          <span id="one" class="font"></span>
-          <br />
-          <span id="two"></span>
-        </div>
-      </div>
-      <div class="hand hour" data-hour-hand></div>
-      <div class="hand minute" data-minute-hand></div>
-      <div class="hand second" data-second-hand></div>
+    <style>
+      :root {
+        --bg1: #0b0d14;
+        --bg2: #1b1f3b;
+        --bg3: #0f3a4a;
+        --card: rgba(255, 255, 255, 0.07);
+        --card-b: rgba(255, 255, 255, 0.14);
+        --fg: #f2f4ff;
+        --muted: #9aa3c7;
+        --accent: #7c8cff;
+        --accent2: #35e0c2;
+        --face: rgba(255, 255, 255, 0.06);
+        --hand: #f2f4ff;
+        --sec: #ff5d7a;
+        --glow: 0 0 40px rgba(124, 140, 255, 0.35);
+      }
+      body[data-theme="light"] {
+        --bg1: #eef1fb;
+        --bg2: #dfe6ff;
+        --bg3: #e6f7f3;
+        --card: rgba(255, 255, 255, 0.65);
+        --card-b: rgba(20, 30, 70, 0.12);
+        --fg: #161a33;
+        --muted: #5b6389;
+        --accent: #4357ff;
+        --accent2: #0fb59a;
+        --face: rgba(255, 255, 255, 0.7);
+        --hand: #161a33;
+        --sec: #e8334f;
+        --glow: 0 10px 40px rgba(67, 87, 255, 0.2);
+      }
+      body[data-theme="neon"] {
+        --bg1: #05010d;
+        --bg2: #2a0a4a;
+        --bg3: #003a46;
+        --card: rgba(255, 255, 255, 0.05);
+        --card-b: rgba(255, 0, 200, 0.35);
+        --fg: #fdf6ff;
+        --muted: #c79bf0;
+        --accent: #ff2bd6;
+        --accent2: #00f0ff;
+        --face: rgba(0, 0, 0, 0.35);
+        --hand: #fdf6ff;
+        --sec: #00f0ff;
+        --glow: 0 0 50px rgba(255, 43, 214, 0.55);
+      }
+      body[data-theme="sunset"] {
+        --bg1: #1d0b1e;
+        --bg2: #6b1d4a;
+        --bg3: #b5532a;
+        --card: rgba(255, 240, 230, 0.09);
+        --card-b: rgba(255, 200, 160, 0.25);
+        --fg: #fff3ea;
+        --muted: #f0b9a0;
+        --accent: #ff9a56;
+        --accent2: #ffd36e;
+        --face: rgba(0, 0, 0, 0.2);
+        --hand: #fff3ea;
+        --sec: #ffd36e;
+        --glow: 0 0 50px rgba(255, 154, 86, 0.4);
+      }
+      body[data-theme="aurora"] {
+        --bg1: #02100f;
+        --bg2: #06433b;
+        --bg3: #1a2d6b;
+        --card: rgba(220, 255, 245, 0.07);
+        --card-b: rgba(120, 255, 220, 0.22);
+        --fg: #e9fff8;
+        --muted: #8fd6c4;
+        --accent: #3ef0b0;
+        --accent2: #7aa2ff;
+        --face: rgba(0, 0, 0, 0.25);
+        --hand: #e9fff8;
+        --sec: #7aa2ff;
+        --glow: 0 0 50px rgba(62, 240, 176, 0.4);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Vazirmatn", system-ui, sans-serif;
+        color: var(--fg);
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--bg1),
+          var(--bg2) 55%,
+          var(--bg3)
+        );
+        transition:
+          background 0.6s,
+          color 0.4s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .blob {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.45;
+        pointer-events: none;
+        animation: float 22s ease-in-out infinite;
+      }
+      .blob.b1 {
+        width: 42vmax;
+        height: 42vmax;
+        background: var(--accent);
+        top: -14vmax;
+        right: -10vmax;
+      }
+      .blob.b2 {
+        width: 36vmax;
+        height: 36vmax;
+        background: var(--accent2);
+        bottom: -14vmax;
+        left: -8vmax;
+        animation-delay: -8s;
+      }
+      .blob.b3 {
+        width: 26vmax;
+        height: 26vmax;
+        background: var(--sec);
+        top: 40%;
+        left: 40%;
+        opacity: 0.18;
+        animation-delay: -15s;
+      }
+      @keyframes float {
+        50% {
+          transform: translate(4vmax, -3vmax) scale(1.12);
+        }
+      }
 
-      <div class="number number1">1</div>
-      <div class="number number2">2</div>
-      <div class="number number3">3</div>
-      <div class="number number4">4</div>
-      <div class="number number5">5</div>
-      <div class="number number6">6</div>
-      <div class="number number7">7</div>
-      <div class="number number8">8</div>
-      <div class="number number9">9</div>
-      <div class="number number10">10</div>
-      <div class="number number11">11</div>
-      <div class="number number12">12</div>
+      header {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 18px 12px 6px;
+      }
+      .tabs {
+        display: flex;
+        gap: 4px;
+        padding: 5px;
+        border-radius: 999px;
+        background: var(--card);
+        border: 1px solid var(--card-b);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .tab {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: 0.9rem;
+        padding: 9px 16px;
+        border-radius: 999px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: 0.25s;
+      }
+      .tab:hover {
+        color: var(--fg);
+      }
+      .tab.on {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #fff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+        font-weight: 600;
+      }
+      body[data-theme="light"] .tab.on {
+        color: #fff;
+      }
+
+      main {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        padding: 8px 12px;
+        min-height: 0;
+      }
+      .view {
+        grid-area: 1/1;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.94) translateY(10px);
+        transition:
+          opacity 0.5s,
+          transform 0.5s,
+          visibility 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+        width: 100%;
+        max-height: 100%;
+      }
+      .view.on {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      /* analog + rings */
+      svg.big {
+        width: min(74vmin, 560px);
+        height: auto;
+        filter: drop-shadow(var(--glow));
+      }
+      .face-bg {
+        fill: var(--face);
+        stroke: var(--card-b);
+        stroke-width: 2;
+      }
+      .tk {
+        stroke: var(--muted);
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+      .tk.big {
+        stroke: var(--fg);
+        stroke-width: 3;
+      }
+      .num {
+        fill: var(--fg);
+        font-size: 26px;
+        font-weight: 600;
+        text-anchor: middle;
+        dominant-baseline: central;
+        font-family: inherit;
+      }
+      .hh,
+      .mh {
+        stroke: var(--hand);
+        stroke-linecap: round;
+      }
+      .hh {
+        stroke-width: 9;
+      }
+      .mh {
+        stroke-width: 6;
+      }
+      .sh {
+        stroke: var(--sec);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      .cap {
+        fill: var(--sec);
+      }
+      .cap2 {
+        fill: var(--bg1);
+      }
+      .a-day {
+        fill: var(--accent2);
+        font-size: 17px;
+        font-weight: 600;
+        text-anchor: middle;
+        font-family: inherit;
+      }
+      .a-date {
+        fill: var(--muted);
+        font-size: 14px;
+        text-anchor: middle;
+        font-family: inherit;
+      }
+      .ring-bg {
+        fill: none;
+        stroke: var(--card-b);
+        stroke-width: 16;
+        opacity: 0.6;
+      }
+      .ring {
+        fill: none;
+        stroke-width: 16;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 200px 200px;
+      }
+      .r-t {
+        fill: var(--fg);
+        font-size: 50px;
+        font-weight: 800;
+        text-anchor: middle;
+        font-family: inherit;
+        direction: ltr;
+      }
+      .r-s {
+        fill: var(--muted);
+        font-size: 15px;
+        text-anchor: middle;
+        font-family: inherit;
+      }
+
+      /* digital */
+      .glass {
+        background: var(--card);
+        border: 1px solid var(--card-b);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 28px;
+        box-shadow: var(--glow);
+      }
+      .digital {
+        padding: clamp(18px, 4vw, 44px) clamp(20px, 5vw, 64px);
+        direction: ltr;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.1em;
+      }
+      .d-main {
+        font-size: clamp(3.4rem, 15vw, 9.5rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        background: linear-gradient(135deg, var(--fg), var(--accent2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-variant-numeric: tabular-nums;
+      }
+      .d-sec {
+        font-size: clamp(1.4rem, 5vw, 3.4rem);
+        font-weight: 600;
+        color: var(--sec);
+        min-width: 2ch;
+        font-variant-numeric: tabular-nums;
+      }
+      .d-ap {
+        font-size: clamp(0.9rem, 2.4vw, 1.4rem);
+        color: var(--accent);
+        margin-inline-start: 0.4em;
+        direction: rtl;
+      }
+      .colon {
+        animation: blink 1s steps(2, jump-none) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0.25;
+        }
+      }
+      .bar {
+        width: min(86vw, 560px);
+        height: 8px;
+        border-radius: 99px;
+        background: var(--card-b);
+        overflow: hidden;
+      }
+      .bar > i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 99px;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+      }
+      .bar-l {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      /* shared date block */
+      .dates {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .dt-fa {
+        font-size: clamp(1.1rem, 3.2vw, 1.9rem);
+        font-weight: 600;
+      }
+      .dt-en {
+        font-size: clamp(0.85rem, 2vw, 1.05rem);
+        color: var(--muted);
+        direction: ltr;
+      }
+      .dt-ar {
+        font-size: clamp(0.8rem, 1.9vw, 1rem);
+        color: var(--accent2);
+      }
+
+      /* binary */
+      .bin {
+        padding: 26px 30px;
+        display: flex;
+        gap: clamp(10px, 3vw, 26px);
+        direction: ltr;
+        align-items: flex-end;
+      }
+      .bcol {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+      .bgrp {
+        display: flex;
+        gap: clamp(6px, 1.6vw, 14px);
+      }
+      .bgrp + .bgrp {
+        margin-inline-start: clamp(8px, 3vw, 28px);
+      }
+      .dot {
+        width: clamp(30px, 8vw, 56px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--card-b);
+        transition: 0.3s;
+        opacity: 0.55;
+      }
+      .dot.on {
+        background: radial-gradient(
+          circle at 35% 30%,
+          #fff,
+          var(--accent) 45%,
+          var(--accent2)
+        );
+        opacity: 1;
+        box-shadow: 0 0 22px var(--accent);
+      }
+      .dot.gh {
+        visibility: hidden;
+      }
+      .bgrp.s .dot.on {
+        background: radial-gradient(circle at 35% 30%, #fff, var(--sec));
+        box-shadow: 0 0 22px var(--sec);
+      }
+      .blab {
+        font-size: clamp(1rem, 3vw, 1.6rem);
+        font-weight: 700;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .bleg {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.8rem;
+        justify-content: flex-end;
+        padding-bottom: calc(clamp(1rem, 3vw, 1.6rem) * 1.5 + 12px);
+      }
+      .bleg span {
+        height: clamp(30px, 8vw, 56px);
+        display: grid;
+        place-items: center;
+      }
+
+      /* words */
+      .words {
+        padding: clamp(24px, 5vw, 56px);
+        max-width: min(92vw, 820px);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .w-main {
+        font-size: clamp(1.6rem, 5.6vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.5;
+        background: linear-gradient(135deg, var(--fg), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .w-per {
+        font-size: clamp(1rem, 2.6vw, 1.5rem);
+        color: var(--accent2);
+      }
+      .w-num {
+        font-size: 1rem;
+        color: var(--muted);
+        direction: ltr;
+      }
+
+      /* controls */
+      footer {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 6px 12px 18px;
+      }
+      .ctl {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 22px;
+        background: var(--card);
+        border: 1px solid var(--card-b);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+      .chip {
+        border: 1px solid var(--card-b);
+        background: transparent;
+        color: var(--fg);
+        font: inherit;
+        font-size: 0.82rem;
+        padding: 7px 14px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .chip:hover {
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.06);
+      }
+      select.chip {
+        appearance: none;
+        -webkit-appearance: none;
+        padding-inline: 14px;
+      }
+      select.chip option {
+        color: #111;
+      }
+      .hint {
+        position: fixed;
+        bottom: 4px;
+        left: 10px;
+        font-size: 0.68rem;
+        color: var(--muted);
+        opacity: 0.6;
+        z-index: 6;
+        direction: ltr;
+      }
+      @media (max-width: 600px) {
+        .hint {
+          display: none;
+        }
+        .tab {
+          padding: 8px 12px;
+          font-size: 0.82rem;
+        }
+        .bin {
+          padding: 18px 14px;
+        }
+      }
+    </style>
+  </head>
+  <body data-theme="midnight">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <header>
+      <nav class="tabs" id="tabs">
+        <button class="tab on" data-mode="analog">آنالوگ</button>
+        <button class="tab" data-mode="digital">دیجیتال</button>
+        <button class="tab" data-mode="rings">حلقه‌ها</button>
+        <button class="tab" data-mode="binary">باینری</button>
+        <button class="tab" data-mode="words">نوشتاری</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- analog -->
+      <section class="view on" id="v-analog">
+        <svg class="big" viewBox="-200 -200 400 400" aria-label="ساعت آنالوگ">
+          <circle class="face-bg" r="192" />
+          <g id="ticks"></g>
+          <g id="nums"></g>
+          <text class="a-day" y="-62" id="aDay"></text>
+          <text class="a-date" y="-40" id="aDate"></text>
+          <g id="hH"><line class="hh" y1="14" y2="-88" /></g>
+          <g id="hM"><line class="mh" y1="18" y2="-130" /></g>
+          <g id="hS">
+            <line class="sh" y1="34" y2="-158" />
+            <circle class="cap" cy="-120" r="5" />
+          </g>
+          <circle class="cap" r="9" />
+          <circle class="cap2" r="3.5" />
+        </svg>
+      </section>
+
+      <!-- digital -->
+      <section class="view" id="v-digital">
+        <div class="glass digital">
+          <span class="d-main" id="dMain"></span
+          ><span class="d-sec" id="dSec"></span
+          ><span class="d-ap" id="dAp"></span>
+        </div>
+        <div class="dates">
+          <div class="dt-fa" id="dFa"></div>
+          <div class="dt-en" id="dEn"></div>
+          <div class="dt-ar" id="dAr"></div>
+        </div>
+        <div class="bar"><i id="dayBar"></i></div>
+        <div class="bar-l" id="dayLbl"></div>
+      </section>
+
+      <!-- rings -->
+      <section class="view" id="v-rings">
+        <svg class="big" viewBox="0 0 400 400" aria-label="حلقه‌های زمان">
+          <circle class="ring-bg" cx="200" cy="200" r="175" />
+          <circle class="ring-bg" cx="200" cy="200" r="145" />
+          <circle class="ring-bg" cx="200" cy="200" r="115" />
+          <circle
+            class="ring"
+            id="rH"
+            cx="200"
+            cy="200"
+            r="175"
+            stroke="var(--accent)"
+          />
+          <circle
+            class="ring"
+            id="rM"
+            cx="200"
+            cy="200"
+            r="145"
+            stroke="var(--accent2)"
+          />
+          <circle
+            class="ring"
+            id="rS"
+            cx="200"
+            cy="200"
+            r="115"
+            stroke="var(--sec)"
+          />
+          <text class="r-t" x="200" y="205" id="rT"></text>
+          <text class="r-s" x="200" y="238" id="rD"></text>
+        </svg>
+      </section>
+
+      <!-- binary -->
+      <section class="view" id="v-binary">
+        <div class="glass bin" id="bin"></div>
+        <div class="dates">
+          <div class="dt-fa" id="bFa"></div>
+          <div class="dt-en">
+            زمان به‌صورت BCD (دودویی-دهدهی) نمایش داده می‌شود
+          </div>
+        </div>
+      </section>
+
+      <!-- words -->
+      <section class="view" id="v-words">
+        <div class="glass words">
+          <div class="w-main" id="wMain"></div>
+          <div class="w-per" id="wPer"></div>
+          <div class="w-num" id="wNum"></div>
+        </div>
+        <div class="dates">
+          <div class="dt-fa" id="wFa"></div>
+          <div class="dt-ar" id="wAr"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ctl">
+        <button class="chip" id="bTheme"></button>
+        <select class="chip" id="selTz" aria-label="منطقه زمانی"></select>
+        <button class="chip" id="bH12"></button>
+        <button class="chip" id="bDig"></button>
+        <button class="chip" id="bFull">تمام‌صفحه</button>
+      </div>
+    </footer>
+    <div class="hint">
+      1–5 modes · T theme · H 12/24 · D digits · F fullscreen
     </div>
+
+    <script>
+      (function () {
+        "use strict";
+        const $ = (s) => document.querySelector(s),
+          $$ = (s) => [...document.querySelectorAll(s)];
+        const THEMES = [
+          ["midnight", "شب"],
+          ["light", "روز"],
+          ["neon", "نئون"],
+          ["sunset", "غروب"],
+          ["aurora", "شفق"],
+        ];
+        const MODES = ["analog", "digital", "rings", "binary", "words"];
+        const TZS = [
+          ["Asia/Tehran", "تهران"],
+          ["Asia/Baku", "باکو"],
+          ["Asia/Dubai", "دبی"],
+          ["Europe/Istanbul", "استانبول"],
+          ["Europe/London", "لندن"],
+          ["Europe/Paris", "پاریس"],
+          ["America/New_York", "نیویورک"],
+          ["Asia/Tokyo", "توکیو"],
+          ["UTC", "UTC"],
+        ];
+
+        let S = {
+          mode: "analog",
+          theme: "midnight",
+          tz: "Asia/Tehran",
+          h12: false,
+          fa: true,
+        };
+        try {
+          const x = JSON.parse(localStorage.getItem("fa-clock") || "null");
+          if (x) S = Object.assign(S, x);
+        } catch (e) {}
+        const save = () => {
+          try {
+            localStorage.setItem("fa-clock", JSON.stringify(S));
+          } catch (e) {}
+        };
+
+        /* digits */
+        const FA = "۰۱۲۳۴۵۶۷۸۹";
+        const toFa = (s) => String(s).replace(/\d/g, (d) => FA[d]);
+        const toEn = (s) =>
+          String(s)
+            .replace(/[۰-۹]/g, (d) => FA.indexOf(d))
+            .replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 1632);
+        const fmt = (s) => (S.fa ? toFa(toEn(s)) : toEn(s));
+        const pad = (n) => String(n).padStart(2, "0");
+
+        /* formatters */
+        let F = {};
+        function buildF() {
+          const tz = S.tz;
+          F.t = new Intl.DateTimeFormat("en-GB", {
+            timeZone: tz,
+            hourCycle: "h23",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          });
+          F.full = new Intl.DateTimeFormat("fa-IR", {
+            timeZone: tz,
+            dateStyle: "full",
+          });
+          F.en = new Intl.DateTimeFormat("en-US", {
+            timeZone: tz,
+            dateStyle: "full",
+          });
+          F.ar = new Intl.DateTimeFormat("fa-IR-u-ca-islamic-umalqura", {
+            timeZone: tz,
+            dateStyle: "long",
+          });
+          F.wd = new Intl.DateTimeFormat("fa-IR", {
+            timeZone: tz,
+            weekday: "long",
+          });
+          F.dm = new Intl.DateTimeFormat("fa-IR", {
+            timeZone: tz,
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          });
+        }
+
+        /* number words */
+        const ON = [
+            "صفر",
+            "یک",
+            "دو",
+            "سه",
+            "چهار",
+            "پنج",
+            "شش",
+            "هفت",
+            "هشت",
+            "نه",
+          ],
+          TN = [
+            "ده",
+            "یازده",
+            "دوازده",
+            "سیزده",
+            "چهارده",
+            "پانزده",
+            "شانزده",
+            "هفده",
+            "هجده",
+            "نوزده",
+          ],
+          TS = ["", "", "بیست", "سی", "چهل", "پنجاه"];
+        function nw(n) {
+          if (n < 10) return ON[n];
+          if (n < 20) return TN[n - 10];
+          const t = TS[Math.floor(n / 10)],
+            o = n % 10;
+          return o ? t + " و " + ON[o] : t;
+        }
+        function period(h) {
+          return h < 5
+            ? "بامداد"
+            : h < 12
+              ? "صبح"
+              : h < 16
+                ? "بعد از ظهر"
+                : h < 19
+                  ? "عصر"
+                  : "شب";
+        }
+
+        /* analog face */
+        function buildFace() {
+          const tk = $("#ticks");
+          if (!tk.firstChild) {
+            let h = "";
+            for (let i = 0; i < 60; i++) {
+              const b = i % 5 === 0;
+              h += `<line class="tk${b ? " big" : ""}" y1="${b ? -170 : -179}" y2="-186" transform="rotate(${i * 6})"/>`;
+            }
+            tk.innerHTML = h;
+          }
+          let n = "";
+          for (let i = 1; i <= 12; i++) {
+            const a = (i * Math.PI) / 6;
+            n += `<text class="num" x="${(Math.sin(a) * 146).toFixed(1)}" y="${(-Math.cos(a) * 146).toFixed(1)}">${fmt(i)}</text>`;
+          }
+          $("#nums").innerHTML = n;
+        }
+
+        /* binary build */
+        const BITS = [2, 4, 3, 4, 3, 4];
+        function buildBin() {
+          const el = $("#bin");
+          let h =
+            '<div class="bleg">' +
+            [8, 4, 2, 1].map((v) => `<span>${v}</span>`).join("") +
+            "</div>";
+          for (let g = 0; g < 3; g++) {
+            h += `<div class="bgrp ${g === 2 ? "s" : ""}">`;
+            for (let c = 0; c < 2; c++) {
+              const ci = g * 2 + c;
+              h += `<div class="bcol" data-c="${ci}">`;
+              [8, 4, 2, 1].forEach((v) => {
+                const max = [2, 9, 5, 9, 5, 9][ci];
+                h += `<div class="dot${v > max ? " gh" : ""}" data-v="${v}"></div>`;
+              });
+              h += `<div class="blab"></div></div>`;
+            }
+            h += "</div>";
+          }
+          el.innerHTML = h;
+        }
+
+        /* time state */
+        let P = { h: 0, m: 0, s: 0 },
+          lastSec = -1,
+          base = 0,
+          baseEpoch = 0;
+        function sync(now) {
+          const ep = Math.floor(now / 1000);
+          if (ep === lastSec) return false;
+          lastSec = ep;
+          const p = F.t.formatToParts(new Date(now));
+          const g = (t) => +p.find((x) => x.type === t).value;
+          P.h = g("hour");
+          P.m = g("minute");
+          P.s = g("second");
+          return true;
+        }
+        function h12(h) {
+          return S.h12 ? h % 12 || 12 : h;
+        }
+
+        function renderSec(now) {
+          const d = new Date(now),
+            hh = h12(P.h);
+          const hs = pad(hh),
+            ms = pad(P.m),
+            ss = pad(P.s);
+          const fa = F.full.format(d),
+            en = F.en.format(d),
+            ar = F.ar.format(d);
+
+          // analog texts
+          $("#aDay").textContent = F.wd.format(d);
+          $("#aDate").textContent = fmt(F.dm.format(d));
+
+          // digital
+          $("#dMain").innerHTML =
+            fmt(hs) + '<span class="colon">:</span>' + fmt(ms);
+          $("#dSec").textContent = fmt(ss);
+          $("#dAp").textContent = S.h12 ? (P.h < 12 ? "ق.ظ" : "ب.ظ") : "";
+          $("#dFa").textContent = fmt(fa);
+          $("#dEn").textContent = en;
+          $("#dAr").textContent = "هجری قمری: " + fmt(ar);
+          const frac = (P.h * 3600 + P.m * 60 + P.s) / 86400;
+          $("#dayBar").style.width = (frac * 100).toFixed(2) + "%";
+          $("#dayLbl").textContent =
+            "امروز " + fmt((frac * 100).toFixed(1)) + "٪ سپری شده است";
+
+          // rings text
+          $("#rT").textContent = fmt(hs + ":" + ms);
+          $("#rD").textContent = F.wd.format(d) + "، " + fmt(F.dm.format(d));
+
+          // binary
+          const digs = [...(hs + ms + ss)].map(Number);
+          $$("#bin .bcol").forEach((c) => {
+            const ci = +c.dataset.c,
+              v = digs[ci];
+            c.querySelectorAll(".dot").forEach((dt) =>
+              dt.classList.toggle("on", (v & +dt.dataset.v) > 0),
+            );
+            c.querySelector(".blab").textContent = fmt(v);
+          });
+          $("#bFa").textContent = fmt(fa);
+
+          // words
+          const wh = S.h12 ? hh : P.h;
+          let w = "ساعت " + nw(wh);
+          if (P.m) w += " و " + nw(P.m) + " دقیقه";
+          if (P.s) w += " و " + nw(P.s) + " ثانیه";
+          $("#wMain").textContent = w;
+          $("#wPer").textContent = period(P.h);
+          $("#wNum").textContent =
+            fmt(hs + ":" + ms + ":" + ss) +
+            (S.h12 ? (P.h < 12 ? " AM" : " PM") : "");
+          $("#wFa").textContent = fmt(fa);
+          $("#wAr").textContent = "هجری قمری: " + fmt(ar);
+        }
+
+        /* ring circumferences */
+        const R = {
+          H: 2 * Math.PI * 175,
+          M: 2 * Math.PI * 145,
+          S: 2 * Math.PI * 115,
+        };
+        [
+          ["#rH", R.H],
+          ["#rM", R.M],
+          ["#rS", R.S],
+        ].forEach(([s, c]) => {
+          const e = $(s);
+          e.style.strokeDasharray = c;
+          e.style.strokeDashoffset = c;
+        });
+
+        function frame() {
+          const now = Date.now(),
+            ms = now % 1000;
+          if (sync(now)) renderSec(now);
+          const sf = P.s + ms / 1000,
+            mf = P.m + sf / 60,
+            hf = (P.h % 12) + mf / 60;
+          if (S.mode === "analog") {
+            $("#hS").setAttribute("transform", "rotate(" + sf * 6 + ")");
+            $("#hM").setAttribute("transform", "rotate(" + mf * 6 + ")");
+            $("#hH").setAttribute("transform", "rotate(" + hf * 30 + ")");
+          } else if (S.mode === "rings") {
+            $("#rS").style.strokeDashoffset = R.S * (1 - sf / 60);
+            $("#rM").style.strokeDashoffset = R.M * (1 - mf / 60);
+            $("#rH").style.strokeDashoffset = R.H * (1 - hf / 12);
+          }
+          requestAnimationFrame(frame);
+        }
+
+        /* UI */
+        function applyUI() {
+          document.body.dataset.theme = S.theme;
+          const tn = THEMES.find((t) => t[0] === S.theme);
+          $("#bTheme").textContent = "تم: " + tn[1];
+          $("#bH12").textContent = S.h12 ? "۱۲ ساعته" : "۲۴ ساعته";
+          $("#bDig").textContent = S.fa ? "ارقام فارسی" : "ارقام لاتین";
+          $$(".tab").forEach((t) =>
+            t.classList.toggle("on", t.dataset.mode === S.mode),
+          );
+          MODES.forEach((m) =>
+            $("#v-" + m).classList.toggle("on", m === S.mode),
+          );
+          $("#selTz").value = S.tz;
+          buildFace();
+          lastSec = -1;
+          save();
+        }
+        function setMode(m) {
+          S.mode = m;
+          applyUI();
+        }
+        $("#tabs").addEventListener("click", (e) => {
+          const b = e.target.closest(".tab");
+          if (b) setMode(b.dataset.mode);
+        });
+        const cycleTheme = () => {
+          const i = THEMES.findIndex((t) => t[0] === S.theme);
+          S.theme = THEMES[(i + 1) % THEMES.length][0];
+          applyUI();
+        };
+        const toggleH12 = () => {
+          S.h12 = !S.h12;
+          applyUI();
+        };
+        const toggleDig = () => {
+          S.fa = !S.fa;
+          applyUI();
+        };
+        const toggleFull = () => {
+          try {
+            document.fullscreenElement
+              ? document.exitFullscreen()
+              : document.documentElement.requestFullscreen();
+          } catch (e) {}
+        };
+        $("#bTheme").onclick = cycleTheme;
+        $("#bH12").onclick = toggleH12;
+        $("#bDig").onclick = toggleDig;
+        $("#bFull").onclick = toggleFull;
+        $("#selTz").innerHTML = TZS.map(
+          (z) => `<option value="${z[0]}">${z[1]}</option>`,
+        ).join("");
+        $("#selTz").onchange = (e) => {
+          S.tz = e.target.value;
+          buildF();
+          applyUI();
+        };
+        addEventListener("keydown", (e) => {
+          if (e.target.tagName === "SELECT") return;
+          const k = e.key.toLowerCase();
+          if (k >= "1" && k <= "5") setMode(MODES[+k - 1]);
+          else if (k === "t") cycleTheme();
+          else if (k === "h") toggleH12();
+          else if (k === "d") toggleDig();
+          else if (k === "f") toggleFull();
+        });
+
+        buildF();
+        buildBin();
+        applyUI();
+        requestAnimationFrame(frame);
+      })();
+    </script>
   </body>
 </html>

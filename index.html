@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>تاریخ فارسی</title>
+    <meta name="description" content="تاریخ فارسی" />
+    <meta name="expires" content="never" />
+    <meta name="apple-mobile-web-app-title" content="تاریخ فا" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index,follow,notranslate" />
+    <link rel="alternate" hreflang="fa-IR" href="https://fa-date.onfing.ir/" />
+    <meta property="og:title" content="تاریخ فارسی" />
+    <meta property="og:description" content="تاریخ فارسی" />
+    <meta property="og:url" content="https://fa-date.onfing.ir/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/favicon.ico" />
+    <meta property="og:image:alt" content="تاریخ فارسی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:site_name" content="تاریخ فارسی" />
+    <link rel="canonical" href="https://fa-date.onfing.ir/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="application-name" content="تاریخ فارسی" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <link
+      rel="apple-touch-icon"
+      sizes="36x36"
+      href="/assets/icon/favicon-36x36.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="/assets/icon/favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/icon/favicon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="/assets/icon/favicon-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="/assets/icon/favicon-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="/assets/icon/favicon-36x36.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/icon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icon/favicon-192x192.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module">
+      (function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();function c(){let s;const n=e=>{document.getElementById("one").innerHTML=e.fa,document.getElementById("two").innerHTML=e.en},o=()=>{const e=new Date,t=new Intl.DateTimeFormat("fa-IR",{dateStyle:"full"}),a=new Intl.DateTimeFormat("en-US",{dateStyle:"full"});s=a.format(e),n({fa:t.format(e),en:a.format(e)})},r=()=>{const e=new Date,t=new Intl.DateTimeFormat("en-US",{dateStyle:"full"});if(t.format(e)!==s){const a=new Intl.DateTimeFormat("fa-IR",{dateStyle:"full"});s=t.format(e),n({fa:a.format(e),en:t.format(e)})}};o(),setInterval(r,1e3)}function l(){const s=()=>{const o=new Date,r=o.getSeconds()/60,e=(r+o.getMinutes())/60,t=(e+o.getHours())/12;n(document.querySelector("[data-second-hand]"),r),n(document.querySelector("[data-minute-hand]"),e),n(document.querySelector("[data-hour-hand]"),t)};function n(o,r){o.style.setProperty("--rotation",r*360)}s(),setInterval(s,1e3)}c();l();
+    </script>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="App">
+        <div>
+          <h1 class="font">امروز</h1>
+        </div>
+        <div>
+          <span id="one" class="font"></span>
+          <br />
+          <span id="two"></span>
+        </div>
+      </div>
+      <div class="hand hour" data-hour-hand></div>
+      <div class="hand minute" data-minute-hand></div>
+      <div class="hand second" data-second-hand></div>
+
+      <div class="number number1">1</div>
+      <div class="number number2">2</div>
+      <div class="number number3">3</div>
+      <div class="number number4">4</div>
+      <div class="number number5">5</div>
+      <div class="number number6">6</div>
+      <div class="number number7">7</div>
+      <div class="number number8">8</div>
+      <div class="number number9">9</div>
+      <div class="number number10">10</div>
+      <div class="number number11">11</div>
+      <div class="number number12">12</div>
+    </div>
+  </body>
+</html>

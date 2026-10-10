@@ -1,23 +1,64 @@
 <!doctype html>
-<html dir="rtl" lang="fa">
+<html dir="rtl" lang="fa-IR">
   <head>
     <meta charset="UTF-8" />
-    <title>تاریخ و ساعت فارسی</title>
+    <title>ساعت فارسی آنلاین | ساعت احسان</title>
     <meta
       name="description"
-      content="ساعت و تاریخ فارسی با حالت‌های مختلف نمایش زمان"
+      content="ساعت چنده؟ ساعت تهران و تاریخ شمسی امروز را آنلاین ببینید. ساعت فارسی احسان با نمایش آنالوگ و دیجیتال، تقویم شمسی و انتخاب منطقه زمانی."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0d14" />
-    <meta name="robots" content="index,follow,notranslate" />
-    <meta name="google" content="notranslate" />
-    <meta property="og:title" content="تاریخ و ساعت فارسی" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://persian-cock.ehsan-kazemi.ir/" />
+    <link
+      rel="alternate"
+      hreflang="fa-IR"
+      href="https://persian-cock.ehsan-kazemi.ir/"
+    />
+    <meta property="og:title" content="ساعت فارسی آنلاین | ساعت احسان" />
+    <meta
+      property="og:description"
+      content="ساعت تهران، تاریخ شمسی و میلادی را با ساعت فارسی احسان ببینید."
+    />
+    <meta property="og:url" content="https://persian-cock.ehsan-kazemi.ir/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://persian-cock.ehsan-kazemi.ir/images/1.png"
+    />
+    <meta property="og:image:alt" content="نمای ساعت فارسی آنلاین احسان" />
     <meta property="og:locale" content="fa_IR" />
+    <meta property="og:site_name" content="ساعت احسان" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ساعت فارسی آنلاین | ساعت احسان" />
+    <meta
+      name="twitter:description"
+      content="ساعت تهران، تاریخ شمسی و میلادی را با ساعت فارسی احسان ببینید."
+    />
+    <meta
+      name="twitter:image"
+      content="https://persian-cock.ehsan-kazemi.ir/images/1.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ساعت احسان | ساعت فارسی آنلاین",
+        "url": "https://persian-cock.ehsan-kazemi.ir/",
+        "description": "نمایش آنلاین ساعت تهران و ساعت مناطق زمانی مختلف همراه با تاریخ شمسی، میلادی و قمری.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "fa-IR",
+        "isAccessibleForFree": true
+      }
+    </script>
     <style>
       :root {
         --bg1: #0b0d14;
@@ -100,14 +141,15 @@
         padding: 0;
         -webkit-tap-highlight-color: transparent;
       }
-      html,
-      body {
-        height: 100%;
+      html {
+        min-height: 100%;
       }
       body {
+        min-height: 100vh;
         font-family: "Vazirmatn", system-ui, sans-serif;
         color: var(--fg);
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         background: linear-gradient(
           135deg,
           var(--bg1),
@@ -216,7 +258,7 @@
         display: grid;
         place-items: center;
         padding: 8px 12px;
-        min-height: 0;
+        min-height: max(280px, calc(100svh - 190px));
       }
       .view {
         grid-area: 1/1;
@@ -830,6 +872,41 @@
       .hint {
         transition: opacity 0.6s;
       }
+      .seo-content {
+        position: relative;
+        z-index: 2;
+        width: min(100% - 32px, 800px);
+        margin: 28px auto 48px;
+        padding: clamp(20px, 4vw, 36px);
+        border: 1px solid var(--card-b);
+        border-radius: 24px;
+        background: var(--card);
+        color: var(--fg);
+        line-height: 2;
+      }
+      .seo-content h1,
+      .seo-content h2 {
+        margin: 0 0 12px;
+        line-height: 1.6;
+      }
+      .seo-content h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+      }
+      .seo-content h2 {
+        margin-top: 22px;
+        font-size: clamp(1.15rem, 3vw, 1.4rem);
+      }
+      .seo-content p,
+      .seo-content li {
+        color: var(--muted);
+      }
+      .seo-content ul {
+        padding-inline-start: 1.5rem;
+      }
+      .seo-content a {
+        color: var(--accent2);
+        text-underline-offset: 3px;
+      }
     </style>
   </head>
   <body data-theme="midnight">
@@ -839,7 +916,7 @@
     <div class="blob b3"></div>
 
     <header>
-      <nav class="tabs" id="tabs">
+      <nav class="tabs" id="tabs" aria-label="حالت نمایش ساعت">
         <button class="tab on" data-mode="analog">آنالوگ</button>
         <button class="tab" data-mode="digital">دیجیتال</button>
         <button class="tab" data-mode="rings">حلقه‌ها</button>
@@ -988,14 +1065,36 @@
         <select class="chip" id="selTz" aria-label="منطقه زمانی"></select>
         <button class="chip" id="bH12"></button>
         <button class="chip" id="bDig"></button>
-        <button class="chip" id="bBg"></button>
         <button class="chip" id="bFull">تمام‌صفحه</button>
       </div>
     </footer>
     <div class="hint">
-      1–6 modes · T theme · H 12/24 · D digits · F
-      fullscreen
+      1–6 modes · T theme · H 12/24 · D digits · F fullscreen
     </div>
+
+    <article class="seo-content" aria-labelledby="page-title">
+      <h1 id="page-title">ساعت فارسی آنلاین؛ ساعت احسان</h1>
+      <p>
+        اگر می‌پرسید «ساعت چنده؟»، زمان فعلی تهران را در ساعت آنلاین بالای صفحه
+        ببینید. ساعت احسان، ساعت فارسی و تاریخ امروز را با ارقام فارسی نمایش
+        می‌دهد و منطقهٔ زمانی پیش‌فرض آن تهران است.
+      </p>
+
+      <h2>ساعت و تاریخ امروز در یک نگاه</h2>
+      <p>
+        این ساعت فارسی علاوه بر نمایش ساعت تهران، تاریخ شمسی، میلادی و قمری را
+        نشان می‌دهد. برای دیدن تاریخ امروز به فارسی نیز می‌توانید
+        <a href="/fa-date.html">صفحهٔ تاریخ فارسی</a> را باز کنید.
+      </p>
+
+      <h2>امکانات ساعت آنلاین احسان</h2>
+      <ul>
+        <li>شش حالت نمایش آنالوگ، دیجیتال، حلقه‌ای، دودویی، نوشتاری و تقویم</li>
+        <li>انتخاب منطقهٔ زمانی تهران و شهرهای دیگر</li>
+        <li>تغییر ارقام فارسی و لاتین و قالب ساعت ۱۲ یا ۲۴ ساعته</li>
+        <li>نمایش تاریخ شمسی، میلادی و قمری</li>
+      </ul>
+    </article>
 
     <script>
       (function () {
@@ -1472,7 +1571,6 @@
           calUpdate(Date.now(), dir);
         };
         $("#stack").addEventListener("click", () => calGo(1));
-
 
         /* ===== idle: hide bars, enlarge clock ===== */
         let idleT;
